@@ -10,11 +10,14 @@ class TotalTime extends Model
 {
     use HasFactory;
 
-    protected $table = 'total_times'; // Specify the table name if it's different from the model name
+    protected $table = 'total_times'; // table name, it's different from the model name
 
     protected $fillable = [
         'user_id',
+        'office_hours',
+        'remote_hours',
         'total_time_hours',
+        'status',
     ];
 }
 

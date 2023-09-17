@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('total_times', function (Blueprint $table) {
+        Schema::create('office_ips', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->float('office_hours');
-            $table->float('remote_hours');
-            $table->float('total_time_hours');
-            $table->string('status');
+            $table->string('office_ip');
+            $table->string('office_name');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('total_times');
+        Schema::dropIfExists('office_ips');
     }
 };
